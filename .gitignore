@@ -40,6 +40,4 @@ yarn-debug.log*
 .yarn-integrity
 
 db/test.*
-yarn.lock
-Gemfile.lock
 /.idea

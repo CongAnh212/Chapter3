@@ -23,10 +23,5 @@ AllCops:
     - 'config/environments/*'
     - 'node_modules/**/*'
 
-Style/StringLiterals:
-  Enabled: false
-
 Layout/EndOfLine:
-  EnforcedStyle: lf
   Enabled: False
-  
