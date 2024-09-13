@@ -25,3 +25,6 @@ AllCops:
 
 Layout/EndOfLine:
   Enabled: False
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: space
