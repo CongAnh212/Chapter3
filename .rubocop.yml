@@ -28,3 +28,6 @@ Layout/EndOfLine:
 
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: space
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: never
