@@ -13,12 +13,17 @@
         <%= f.password_field :password, class: "form-control", placeholder: "Enter your password" %>
       </div>
 
+      <%= f.label :remember_me, class: "checkbox inline" do %>
+        <%= f.check_box :remember_me %>
+        <span>Remember me on this computer</span>
+      <% end %>
+
       <div class="form-group">
         <%= f.submit "Login", class: "btn btn-primary btn-block mt-3 w-100" %>
       </div>
 
       <div>
-        New user? <%= link_to 'Sign up now!', signup_path  %>
+        New user? <%= link_to 'Sign up now!', signup_path %>
       </div>
     <% end %>
   </div>
