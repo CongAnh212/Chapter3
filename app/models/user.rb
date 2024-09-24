@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
+  has_many :microposts, dependent: :destroy
+
   attr_accessor :remember_token, :activation_token, :reset_token
 
   scope :is_active, -> { where(activated: true) }
@@ -50,6 +52,12 @@ class User < ApplicationRecord
   # Returns true if a password reset has expired.
   def send_password_reset_email
     UserMailer.password_reset(self).deliver_now
+  end
+
+  # Defines a proto-feed.
+  # See "Following users" for the full implementation.
+  def feed
+    microposts
   end
 
   def password_reset_expired?
